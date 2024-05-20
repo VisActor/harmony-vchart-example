@@ -34,7 +34,7 @@ ohpm install @visactor/harmony-vchart
 
 ### 创建图表
 
-以创建一个简单的状图为例。在你的 Harmony 组件中，引入 `visactor/harmony-vchart` 的 `<BarChart>` 组件，并在组件中使用它们。下面是一个创建柱状图的示例代码：
+以创建一个简单的状图为例。在你的 Harmony 组件中，引入 `visactor/harmony-vchart` 的 `<VChart>` 组件，并在组件中使用它们。下面是一个创建柱状图的示例代码：
 
 ```typescript
 import { VChart } from '@visactor/harmony-vchart';
@@ -170,7 +170,7 @@ export interface IInitOption {
 
 ### 基础事件
 
-统一图表标签（VChart）或是语法化图表标签（BarChart 等）最外层图表组件，其 Props 上都支持底层渲染层抛出的场景树事件`EventsProps`。
+统一图表标签（VChart）是最外层图表组件，其 Props 上都支持底层渲染层抛出的场景树事件`EventsProps`。
 
 `EventsProps`的定义如下：
 
