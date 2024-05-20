@@ -1,6 +1,7 @@
 # Harmony VChart
 
-- 仓库地址：[https://github.com/VisActor/VChart/tree/main/packages/harmony-vchart](https://github.com/VisActor/VChart/tree/main/packages/harmony-vchart)
+- Github仓库地址：https://github.com/VisActor/harmony-vchart-example/
+- Gitee仓库地址：https://gitee.com/VisActor/harmony-vchart-example/
 
 HarmonyOS 是华为研发的智能终端操作系统，以 ArkTS 为主要开发语言，VChart 从 1.11.1 版本开始，支持兼容 HarmonyOS 的图表开发，为了方便 Harmony 技术栈的同学更好的使用，我们提供了 VChart 的 HarmonyOS 封装包`@visactor/harmony-vchart`（此包不是 NPM 包，是 OHPM 包），该组件的 spec 配置项与 VChart 一致
 
@@ -22,7 +23,7 @@ HarmonyOS 是华为研发的智能终端操作系统，以 ArkTS 为主要开发
 
 ## 快速上手
 
-本文假设用户已了解并会使用 HarmonyOS，具体 HarmonyOS 的相关知识，请参考[HarmonyOS 开发者平台](https://developer.huawei.com/consumer/cn/)
+本文假设用户已了解 HarmonyOS 开发流程，具体 HarmonyOS 的相关知识，请参考[HarmonyOS 开发者平台](https://developer.huawei.com/consumer/cn/)
 
 ### 如何安装
 
@@ -39,7 +40,7 @@ ohpm install @visactor/harmony-vchart
 ```typescript
 import { VChart } from '@visactor/harmony-vchart';
 
-const spec = '{"type":"bar","data":[{"id":"barData","values":[{"month":"Monday","sales":22},{"month":"Tuesday","sales":13},{"month":"Wednesday","sales":25},{"month":"Thursday","sales":29},{"month":"Friday","sales":38}]}],"xField":"month","yField":"sales","crosshair":{"xField":{"visible":true}}}'
+const spec = '{"type":"bar","data":[{"id":"barData","values":[{"type":"Autocracies","year":"1930","value":129},{"type":"Autocracies","year":"1940","value":133},{"type":"Autocracies","year":"1950","value":130},{"type":"Autocracies","year":"1960","value":126},{"type":"Autocracies","year":"1970","value":117},{"type":"Autocracies","year":"1980","value":114},{"type":"Autocracies","year":"1990","value":111},{"type":"Autocracies","year":"2000","value":89},{"type":"Autocracies","year":"2010","value":80},{"type":"Autocracies","year":"2018","value":80},{"type":"Democracies","year":"1930","value":22},{"type":"Democracies","year":"1940","value":13},{"type":"Democracies","year":"1950","value":25},{"type":"Democracies","year":"1960","value":29},{"type":"Democracies","year":"1970","value":38},{"type":"Democracies","year":"1980","value":41},{"type":"Democracies","year":"1990","value":57},{"type":"Democracies","year":"2000","value":87},{"type":"Democracies","year":"2010","value":98},{"type":"Democracies","year":"2018","value":99}]}],"seriesField":"type","xField":["year","type"],"yField":"value","bar":{"style":{"stroke":"#000","lineWidth":1},"state":{"hover":{"stroke":"black"}}},"legends":{"visible":true,"position":"start","orient":"top"}}'
 
 @Entry
 @Component
@@ -162,7 +163,7 @@ export interface IInitOption {
 
 `EventsProps` 的定义参考事件交互章节
 
-`onReady`是一个内置的回调事件，会在图表渲染或更新时触发，其入参分别代表图表实例对象，以及是否初次渲染。
+`onChartReadyCb`是一个内置的回调事件，会在图表渲染或更新时触发，其入参分别代表图表实例对象，以及是否初次渲染。
 
 举例来说，开发者可以在初次渲染时，将需要触发的回调事件注册在图表实例上以实现图表交互功能。
 
