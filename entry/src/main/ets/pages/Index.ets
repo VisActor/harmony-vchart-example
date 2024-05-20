@@ -1,4 +1,4 @@
-import { ChartComponent } from 'vchart';
+import { VChart } from '@visactor/harmony-vchart';
 import { VisActor } from './canvas';
 
 @Entry
@@ -18,7 +18,7 @@ struct Index {
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
         // Stage({ bg: 'red', h: 500 })
-        ChartComponent({ spec: JSON.parse(this.spec), w: 300, h: 500 })
+        VChart({ spec: JSON.parse(this.spec), w: 300, h: 500 })
         // VisActor()
       }
       .width('100%')

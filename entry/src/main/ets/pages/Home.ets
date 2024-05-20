@@ -136,10 +136,6 @@ struct Home {
             ImageContainer(item)
           }, (item: IConfigItem) => item.label)
         }
-        Button("OhChart")
-          .onClick(() => {
-            router.pushUrl({url: 'pages/OhChart'})
-          })
       }.padding({ left: 16, right: 16 })
     }.scrollable(ScrollDirection.Vertical).scrollBar(BarState.Off).edgeEffect(EdgeEffect.Spring)
   }
