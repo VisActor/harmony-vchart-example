@@ -6,7 +6,7 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "@visactor/harmony-vchart": "1.11.2"
+    "@visactor/harmony-vchart": "1.11.4"
   },
   "devDependencies": {
     "@ohos/hypium": "1.0.16",
