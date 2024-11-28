@@ -11,12 +11,18 @@ interface IRouterParams {
 
 const params: IRouterParams = router.getParams() as IRouterParams;
 
+// const spec = '{"type":"bar","data":[{"id":"barData","values":[{"month":"Monday","sales":22},{"month":"Tuesday","sales":13},{"month":"Wednesday","sales":25},{"month":"Thursday","sales":29},{"month":"Friday","sales":38}]}],"xField":"month","yField":"sales","crosshair":{"xField":{"visible":true}}}'
+
 @Entry
 @Component
 struct Chart {
   @State spec: Object = params.spec;
   private t: number = 0;
   @State delta: number = 0;
+
+  onPageShow(): void {
+    this.spec = params.spec;
+  }
 
   build() {
     Row() {
@@ -26,7 +32,7 @@ struct Chart {
           .fontWeight(FontWeight.Bold)
         // Stage({ bg: 'red', h: 500 })
         VChart({
-          spec: params.spec, w: 300, h: 300,
+          spec: this.spec, w: 300, h: 300,
           onChartInitCb: () => {},
           onChartReadyCb: () => {},
           initOption: {
